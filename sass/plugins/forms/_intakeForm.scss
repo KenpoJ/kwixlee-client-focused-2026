@@ -1,0 +1,19 @@
+#multi-step-form {
+    .fw-step-part {
+        background: $color__alternate;
+        border-color: $color__primary;
+    }
+    ul.fw-progress-bar li:before {
+        background-color: $color__alternate !important;
+        border: 1px solid red;
+    }
+    .fw-progress-step.fw-visited, 
+    // ul.fw-progress-bar .fw-active:last-child .fw-txt-ellipsis, 
+    ul.fw-progress-bar .fw-active .fw-txt-ellipsis, 
+    .fw-progress-step.fw-visited .fw-txt-ellipsis {
+        color: $color__primary !important;
+    }
+    .fw-progress-bar .fw-progress-step:before {
+        background-color: $color__primary !important;
+    }
+}

@@ -4,26 +4,7 @@
 
 <main id="main" class="site-main" role="main">
 
-<section class="page-hero">
-    <?php echo do_shortcode('[qcld_hero id=1]'); ?>
-    <!-- Hero here!!! -->
-</section>
-
-<section class="video-showcase-home">
-    <div class="content-container">
-    <?php echo do_shortcode('[video_samples_display classes="samples-list" post_type="video-sample" limit=3]'); ?>
-</section>
-
-<?php echo do_shortcode('[testimonials post_type="testimonial" title="What Our Clients are Saying" limit=3]'); ?>
-
-<section class="cta cta-home">
-    <div class="content-container">
-        <h2>Submitting to Festivals?</h2>
-        <h3>Get your film's trailer right</h3>
-        <p>Make sure your submission stands out with a trailer that captivates audiences and festival judges alike. <br>Download for <strong>free Trailer-Ready: Your Complete Guide to Prepping Your Film</strong> with information on how to prepare your film and materials for a trailer editor.</p>
-        <a class="btn" href="#wow-modal-id-1">Get the Guide</a>
-    </div>
-</section>
+<?php the_content(); ?>
 
 <section class="about">
     <div class="content-container">

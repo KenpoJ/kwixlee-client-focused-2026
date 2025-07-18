@@ -1,4 +1,7 @@
 .testimonials-container {
+    .testimonials-title {
+        text-align: left;
+    }
     .testimonials-description {
         // font-size: 2rem;
         // font-weight: bold;
@@ -11,9 +14,10 @@
         flex-wrap: wrap;
 
         .testimonial-card {
-            padding: 1rem 1rem 1.5rem;
+            padding: 1.5rem 1.5rem 2rem;
             flex: 0 1 48%;
             display: flex;
+            flex-direction: column;
             gap: 1rem;
             align-items: center;
             @include box-shadow();
@@ -30,10 +34,12 @@
                 border-radius: 100%;
             }
             .testimonial-card-copy {
-                // border: 1px solid red;
+                text-align: left;
             }
             .testimonial-card-name {
                 margin-bottom: 0;
+                font-size: 1.2rem;
+                font-weight: bold;
                 // border: 1px solid green;
             }
             .testimonial-card-company {

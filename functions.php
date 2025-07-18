@@ -191,8 +191,10 @@ add_action( 'pre_get_posts', 'video_samples_blog_taxonomy_queries' );
  */
 include_once('shortcodes/video-showcase-display.php');
 include_once('shortcodes/testimonials_shortcode.php');
+include_once('shortcodes/home_hero_shortcode.php');
 // include_once('shortcodes/project-intake-form.php');
 
 add_shortcode('video_samples_display', 'video_showcase_home_shortcode');
 add_shortcode('testimonials', 'testimonal_posts_display_shortcode');
+add_shortcode('home_hero', 'home_hero_shortcode');
 // add_shortcode('project_intake_form', 'project_intake_form_shortcode');
