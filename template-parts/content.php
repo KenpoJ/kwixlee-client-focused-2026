@@ -120,15 +120,21 @@
 
 		if (in_array('Trailer', $stripped_categories)) {
 			$variable_cta = '<section class="video-cta">';
-			$variable_cta .= 'This is the content of the trailer cta section.';
+			$variable_cta .= '<h3>Do you need a video editor for your film\'s trailer?</h3>';
+			$variable_cta .= '<p>Reach out and let\'s discuss your project!</p>';
+			$variable_cta .= '<a class="btn btn-primary" href="/contact/">Contact Me</a>';
 			$variable_cta .= '</section>';
 		} else if (in_array('Short Film', $stripped_categories)) {
 			$variable_cta = '<section class="video-cta">';
-			$variable_cta .= 'This is the content of the short film cta section.';
+			$variable_cta .= '<h3>Do you need a video editor for your short film?</h3>';
+			$variable_cta .= '<p>Reach out and let\'s discuss your project!</p>';
+			$variable_cta .= '<a class="btn btn-primary" href="/contact/">Contact Me</a>';
 			$variable_cta .= '</section>';
 		} else {
 			$variable_cta = '<section class="video-cta">';
-			$variable_cta .= 'This is the content of the general cta section.';
+			$variable_cta .= '<h3>Do you need a video editor for your project?</h3>';
+			$variable_cta .= '<p>Reach out and let\'s discuss your needs!</p>';
+			$variable_cta .= '<a class="btn btn-primary" href="/contact/">Contact Me</a>';
 			$variable_cta .= '</section>';
 		}
 		echo $variable_cta;
