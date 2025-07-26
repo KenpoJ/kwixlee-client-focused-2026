@@ -8,7 +8,7 @@ h6 {
 }
 h1 {
 	margin-top: 4rem;
-	padding-left: 2rem;
+	padding-left: 1rem;
 	font-family: $font__heading_large;
 	font-size: 3.5rem;
 	font-weight: 800;
@@ -18,12 +18,34 @@ h1 {
 	&:before {
 		content: '';
 		display: block;
-		width: 1.75rem;
-		height: 2.5rem;
+		width: 2.5rem;
+		height: 1.75rem;
+		background-color: $color__primary;
+		position: absolute;
+		left: 0;
+		top: -0.5rem;
+		z-index: -1;
+		@include border-radius();
+	}
+}
+h2 {
+	margin-top: 2rem;
+	padding-left: 1rem;
+	font-family: $font__heading_large;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 2.5rem;
+		height: 1.75rem;
 		background-color: $color__primary;
 		position: absolute;
 		left: 0;
 		top: -1rem;
+		z-index: -1;
 		@include border-radius();
 	}
 }
@@ -57,18 +79,22 @@ h2:not(.h2-basic) {
 	}
 }
 h3 {
+	margin-top: 0;
 	font-family: $font__heading_regular;
 	font-size: 2.5rem;
 }
 h4 {
+	margin-top: 0;
 	font-family: $font__heading_regular;
 	font-size: 2rem;
 }
 h5 {
+	margin-top: 0;
 	font-family: $font__heading_regular;
 	font-size: 1.5rem;
 }
 h6 {
+	margin-top: 0;
 	font-family: $font__heading_regular;
 	font-size: 1rem;
 }

@@ -20,9 +20,11 @@
             flex-direction: column;
             gap: 1rem;
             align-items: center;
-            @include box-shadow();
-            border: 1px solid $color__background-hr;
+            color: $color__dark;
+            @include box-shadow(darken($color__light, 70%), 0, 5px, 1rem, .5rem);
+            border: 1px solid darken($color__light, 70%);
             @include border-radius();
+            background: $color__light;
 
             @media screen and (max-width: 768px) {
                 flex: 0 1 90%;

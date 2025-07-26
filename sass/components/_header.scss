@@ -1,7 +1,7 @@
 header {
     &.site-header {
         border-bottom: 2px solid $color__primary;
-        background: url('/wp-content/uploads/2025/01/kwixlee-mark-faded.png') no-repeat 0 30%;
+        // background: url('/wp-content/uploads/2025/01/kwixlee-mark-faded.png') no-repeat 0 30%;
 
         .content-container {
             position: relative;
@@ -48,7 +48,7 @@ header {
                 margin-right: 1rem;
 
                 a {
-                    color: $color__dark;
+                    color: $color__light;
                     text-decoration: none;
                     font-weight: 600;
                     transition: 0.3s;
@@ -80,7 +80,7 @@ header {
     display: block;
     width: 35px;
     height: 5px;
-    background-color: $color__dark;
+    background-color: $color__light;
     margin: 6px 0;
     transition: 0.4s;
 }

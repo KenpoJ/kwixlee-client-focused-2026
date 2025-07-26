@@ -4,15 +4,6 @@
         margin-right: 2rem;
         margin-bottom: 1.5rem;
         max-width: 50%;
-        img {
-            width: 100%;
-            height: auto;
-        }
-        @media screen and (max-width: 768px) {
-            float: none;
-            margin-right: 0;
-            max-width: 100%;
-        }
     }
 }
 .about-content_text {

@@ -2,10 +2,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @include box-shadow();
+    color: $color__dark;
+    @include box-shadow(darken($color__light, 70%), 0, 5px, 1rem, .5rem);
     @include border-radius();
-    border: 1px solid $color__background-hr;
+    border: 1px solid darken($color__light, 70%);
+    background: $color__light;
 
+    figure {
+        img {
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+    }
     .service-title {
         margin-top: 0;
         margin-bottom: 1rem;;
@@ -27,6 +34,7 @@
 }
 .wp-block-table {
     width: 100%;
+    color: $color__dark;
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 1rem;
