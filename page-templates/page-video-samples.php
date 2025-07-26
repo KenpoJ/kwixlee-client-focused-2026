@@ -58,6 +58,7 @@
 
         wp_reset_postdata();
 
+        the_title( '<h1 class="entry-title">', '</h1>' );
         $markup = '<section class="video-samples-blog">';
         $markup .= $card_markup;
         $markup .= '</section>';

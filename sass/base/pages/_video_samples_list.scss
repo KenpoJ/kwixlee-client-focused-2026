@@ -2,22 +2,29 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 3rem;
 
     .video-samples-blog-card {
-        flex: 0 1 48%;
-        @include box-shadow();
+        flex: 0 1 46%;
+        @include box-shadow(darken($color__light, 70%), 0, 5px, 1rem, .5rem);
         @include border-radius();
-        border: 1px solid $color__background-hr;
+        border: 1px solid $color__dark;
+        background: $color__light;
+
+        @media screen and (max-width: 768px) {
+            flex: 0 1 100%;
+        }
 
         .card-image {
             img {
                 width: 100%;
                 height: auto;
+                @include border-radius(4px 4px 0 0);
             }
         }
         .card-content {
             padding: 1rem 1rem 2rem;
+            color: $color__dark;
             text-align: center;
 
             h3 {
@@ -27,6 +34,10 @@
         }
         .tags {
             margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
 
             a {
                 padding: 0.5rem 1rem;

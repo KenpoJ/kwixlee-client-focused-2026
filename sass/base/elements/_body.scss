@@ -1,5 +1,5 @@
 body {
-    // background: $color__dark;
+    background: $color__dark;
 }
 header {
     &.site-header {
@@ -26,6 +26,17 @@ section {
     @media screen and (max-width: 1159px) {
         width: 90%;
     }
+}
+
+.wp-block-separator {
+    margin: 3rem auto;
+    width: 100%;
+    height: 1px;
+    border-color: $color__primary;
+}
+
+img {
+    @include border-radius();
 }
 
 footer {

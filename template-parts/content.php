@@ -50,6 +50,35 @@
 
 	<div class="entry-content">
 		<?php
+		// display post categories
+		$categories = get_the_category();
+		$stripped_categories = array_map(function($category) {
+			return $category->name;
+		}, $categories);
+		?>
+		<div class="categories">
+			<span>Categories: </span>
+			<?php
+			if ($categories) {
+				foreach($categories as $category) {
+					// $featuredClass = '';
+					// ($category->name != 'Featured') ? $featuredClass = 'featuredClass' : $featuredClass = '';
+					// echo '<span class="category '.$featuredClass.'">'.$category->name.'</span>'; 
+					echo '<span class="category">'.$category->name.'</span>'; 
+				}
+			}
+			?>
+		</div>
+		<?php
+		// display post tags
+		$posttags = get_the_tag_list('', ' ');
+		?>
+		<div class="post-tags">
+			<?php
+			echo $posttags;
+			?>
+		</div>
+		<?php
 		the_content(
 			sprintf(
 				wp_kses(
@@ -65,12 +94,52 @@
 			)
 		);
 
+		// display custom fields
+		$project_name = get_field('project_name');
+		$genre = get_field('genre');
+		$notes = get_field('notes');
+		$starring = get_field('starring');
+		$year_released = get_field('year_released');
+		$print_year = '';
+		($year_released) ? $print_year = ' ('.$year_released.')' : $print_year = '';
+
+		if ($project_name) {
+			echo '<div class="project-name"><strong>Project Name</strong>: '.$project_name.''.$print_year.'</div>';
+		}
+		if ($genre) {
+			echo '<div class="genre"><strong>Genre</strong>: '.$genre.'</div>';
+		}
+		if ($starring) {
+			echo '<div class="starring"><strong>Starring</strong>: '.$starring.'</div>';
+		}
+		if ($notes) {
+			echo '<div class="notes"><strong>Notes</strong>: '.$notes.'</div>';
+		}
+
+		$variable_cta = '';
+
+		if (in_array('Trailer', $stripped_categories)) {
+			$variable_cta = '<section class="video-cta">';
+			$variable_cta .= 'This is the content of the trailer cta section.';
+			$variable_cta .= '</section>';
+		} else if (in_array('Short Film', $stripped_categories)) {
+			$variable_cta = '<section class="video-cta">';
+			$variable_cta .= 'This is the content of the short film cta section.';
+			$variable_cta .= '</section>';
+		} else {
+			$variable_cta = '<section class="video-cta">';
+			$variable_cta .= 'This is the content of the general cta section.';
+			$variable_cta .= '</section>';
+		}
+		echo $variable_cta;
+
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kwixlee_simple_2025' ),
 				'after'  => '</div>',
 			)
 		);
+
 		?>
 	</div><!-- .entry-content -->
 	<?php
