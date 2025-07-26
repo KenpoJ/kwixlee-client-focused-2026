@@ -22,20 +22,25 @@ function home_hero_shortcode ( $atts, $content = null ) {
 
     (strlen($id) > 0) ? $id = 'id="'.$id.'"' : '';
     (strlen($classes) > 0) ? $classes = 'class="'.$classes.'"' : '';
-    (strlen($heading) > 0) ? $heading = '<h2 class="h2-basic">'.$heading.'</h2>' : '';
-    (strlen($subheading) > 0) ? $subheading = '<h3 class="">'.$subheading.'</h3>' : '';
+    (strlen($heading) > 0) ? $heading = '<h2 class="hero-home-heading h2-basic">'.$heading.'</h2>' : '';
+    (strlen($subheading) > 0) ? $subheading = '<p class="hero-home-subheading">'.$subheading.'</p>' : '';
     (strlen($background_image) > 0) ? $background_markup = 'style="background-image: url('.$background_image.');"' : '';
-    (strlen($cta_copy) > 0) ? $cta_markup = '<a href="'.$cta_link.'" class="btn btn-primary">'.$cta_copy.'</a>' : '';
+    (strlen($cta_copy) > 0) ? $cta_markup = '<a href="'.$cta_link.'" class="btn btn-primary cta-home-hero">'.$cta_copy.'</a>' : '';
 
 
     $markup = '';
 
     $markup .= '<div id="'.$id.'" class="hero-home '.$classes.'"'. $background_markup.'>';
-    $markup .= '<div class="video-samples-display-content">';
-    $markup .= '<div class="video-samples-display-titles">';
+    $markup .= '<div class="hero-home-content content-container">';
+    $markup .= '<div class="hero-home-titles">';
     $markup .= $heading;
     $markup .= $subheading;
     $markup .= $cta_markup;
+    $markup .= '</div>';
+    $markup .= '<div class="hero-home-images">';
+    $markup .= '<img src="/wp-content/uploads/2025/07/aeric-urban.png" alt="Home Hero Image" class="hero-home-image-one">';
+    $markup .= '<img src="/wp-content/uploads/2025/07/aeric-urban.png" alt="Home Hero Image" class="hero-home-image-two">';
+    $markup .= '<img src="/wp-content/uploads/2025/07/aeric-urban.png" alt="Home Hero Image" class="hero-home-image-three">';
     $markup .= '</div>';
     $markup .= '</div></div>';
 
