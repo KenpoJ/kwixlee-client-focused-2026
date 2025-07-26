@@ -1,46 +1,64 @@
 .video-samples-blog {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
 
     .video-samples-blog-card {
-        flex: 0 1 46%;
+        flex: 0 1 100%;
+        display: grid;
+        grid-template-columns: 33% 1fr;
+        grid-template-rows: auto;
         @include box-shadow(darken($color__light, 70%), 0, 5px, 1rem, .5rem);
         @include border-radius();
         border: 1px solid $color__dark;
         background: $color__light;
 
         @media screen and (max-width: 768px) {
-            flex: 0 1 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 310px auto;
         }
-
         .card-image {
-            img {
-                width: 100%;
-                height: auto;
-                @include border-radius(4px 4px 0 0);
-            }
+            height: 100%;
+            width: 100%;
         }
         .card-content {
             padding: 1rem 1rem 2rem;
+            display: flex;
+            flex-direction: column;
             color: $color__dark;
             text-align: center;
 
-            h3 {
+            .title {
                 margin: 0;
                 font-size: 1.5rem;
+
+                a {
+                    color: $color__dark;
+                    text-decoration: none;
+                    transition: color .2s;
+
+                    &:hover {
+                        color: $color__primary;
+                    }
+                }
             }
+        }
+        .card-excerpt {
+            text-align: left;
         }
         .tags {
             margin-top: 1rem;
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
+            align-items: start;
             justify-content: center;
 
             a {
-                padding: 0.5rem 1rem;
+                padding: 0.25rem .75rem;
+                font-size: .9rem;
                 color: $color__primary;
                 text-decoration: none;
                 border: 1px solid $color__primary;

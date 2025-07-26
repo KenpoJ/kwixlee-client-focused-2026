@@ -30,17 +30,14 @@
 
                 $card_markup .= '<div class="video-samples-blog-card">';
                 $card_markup .= '<a href="'.get_permalink().'">';
-                $card_markup .= '<div class="card-image">';
-                $card_markup .= '<img src="'.esc_url($image_link).'" alt="'.get_the_title().'">';
+                $card_markup .= '<div class="card-image" style="background: no-repeat center/150% url('.esc_url($image_link).');">';
+                // $card_markup .= '<img src="'.esc_url($image_link).'" alt="'.get_the_title().'">';
                 $card_markup .= '</div>';
                 $card_markup .= '</a>';
                 $card_markup .= '<div class="card-content">';
-                $card_markup .= '<div class="title">';
-                $card_markup .= '<h3>'.get_the_title().'</h3>';
-                $card_markup .= '</div>';
-                $card_markup .= '<div class="tags">';
+                $card_markup .= '<h3 class="title"><a href="'.get_permalink().'">'.get_the_title().'</a></h3>';
+                $card_markup .= '<div class="card-excerpt">'.get_the_excerpt().'</div>';
                 $card_markup .= '<div class="tags">'.$posttags.'</div>';
-                $card_markup .= '</div>';
                 $card_markup .= '</div>';
                 $card_markup .= '</div>';
             }
