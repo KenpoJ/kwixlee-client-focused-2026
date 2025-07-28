@@ -13,17 +13,19 @@ function home_hero_shortcode ( $atts, $content = null ) {
     extract(shortcode_atts(array(
         'id'                 => '',
         'classes'            => '',
-        'heading'              => '',
-        'subheading'        => '',
+        'heading'            => '',
+        'subheading'         => '',
+        'description'        => '',
         'background_image'   => '',
-        'cta_copy'                => '',
-        'cta_link'                => ''
+        'cta_copy'           => '',
+        'cta_link'           => ''
     ), $atts));
 
     (strlen($id) > 0) ? $id = 'id="'.$id.'"' : '';
     (strlen($classes) > 0) ? $classes = 'class="'.$classes.'"' : '';
     (strlen($heading) > 0) ? $heading = '<h2 class="hero-home-heading h2-basic">'.$heading.'</h2>' : '';
-    (strlen($subheading) > 0) ? $subheading = '<p class="hero-home-subheading">'.$subheading.'</p>' : '';
+    (strlen($subheading) > 0) ? $subheading = '<h3 class="hero-home-subheading">'.$subheading.'</h3>' : '';
+    (strlen($description) > 0) ? $description = '<p class="hero-home-description">'.$description.'</p>' : '';
     (strlen($background_image) > 0) ? $background_markup = 'style="background-image: url('.$background_image.');"' : '';
     (strlen($cta_copy) > 0) ? $cta_markup = '<a href="'.$cta_link.'" class="btn btn-primary cta-home-hero">'.$cta_copy.'</a>' : '';
 
@@ -35,6 +37,7 @@ function home_hero_shortcode ( $atts, $content = null ) {
     $markup .= '<div class="hero-home-titles">';
     $markup .= $heading;
     $markup .= $subheading;
+    $markup .= $description;
     $markup .= $cta_markup;
     $markup .= '</div>';
     $markup .= '<div class="hero-home-images">';
