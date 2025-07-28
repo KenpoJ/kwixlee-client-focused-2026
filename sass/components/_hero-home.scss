@@ -55,6 +55,7 @@
 
         img {
             border-radius: 10px;
+            filter: grayscale(80%);
         }
 
         @media screen and (max-width: 768px) {

@@ -41,9 +41,9 @@ function home_hero_shortcode ( $atts, $content = null ) {
     $markup .= $cta_markup;
     $markup .= '</div>';
     $markup .= '<div class="hero-home-images">';
-    $markup .= '<img src="/wp-content/uploads/2025/07/aeric-urban.png" alt="Home Hero Image" class="hero-home-image-one">';
-    $markup .= '<img src="/wp-content/uploads/2025/07/aeric-urban.png" alt="Home Hero Image" class="hero-home-image-two">';
-    $markup .= '<img src="/wp-content/uploads/2025/07/aeric-urban.png" alt="Home Hero Image" class="hero-home-image-three">';
+    $markup .= '<img src="/wp-content/uploads/2025/07/cameraman-on-set-rotated.jpg" alt="Home Hero Image" class="hero-home-image-one">';
+    $markup .= '<img src="/wp-content/uploads/2025/07/arri-film-camera-on-dolly-rotated.jpg" alt="Home Hero Image" class="hero-home-image-two">';
+    $markup .= '<img src="/wp-content/uploads/2025/07/clapboard-rotated.jpg" alt="Home Hero Image" class="hero-home-image-three">';
     $markup .= '</div>';
     $markup .= '</div></div>';
 
