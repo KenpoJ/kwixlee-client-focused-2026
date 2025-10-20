@@ -84,13 +84,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
-@import "plugins/sliderHero";
+@import "plugins/plugins";
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
 // @import "plugins/jetpack/infinite-scroll";
 
-@import "plugins/forms/wpforms";
+// @import "plugins/forms/wpforms";
 
 /*--------------------------------------------------------------
 # Utilities
