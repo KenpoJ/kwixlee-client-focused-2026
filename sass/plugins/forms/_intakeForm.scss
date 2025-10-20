@@ -1,19 +1,63 @@
 #multi-step-form {
-    .fw-step-part {
-        background: $color__alternate;
-        border-color: $color__primary;
+    .fw-step-block {
+        margin-bottom: 1.5rem !important;
     }
-    ul.fw-progress-bar li:before {
-        background-color: $color__alternate !important;
-        border: 1px solid red;
+    .fw-wizard-step {
+        background: #E9E9E9;
+
+        &.fw-current {
+            display: flex !important;
+            flex-wrap: wrap;
+            gap: 1rem;
+
+            .fw-step-part {
+                // max-width: 49%;
+                margin-bottom: 2rem;
+                padding: 1rem !important;
+                flex: 0 1 49%;
+            }
+        }
     }
-    .fw-progress-step.fw-visited, 
-    // ul.fw-progress-bar .fw-active:last-child .fw-txt-ellipsis, 
-    ul.fw-progress-bar .fw-active .fw-txt-ellipsis, 
-    .fw-progress-step.fw-visited .fw-txt-ellipsis {
-        color: $color__primary !important;
+    .fw-wizard-step-container {
+        color: $color__dark;
     }
-    .fw-progress-bar .fw-progress-step:before {
-        background-color: $color__primary !important;
+    &.fw-large-container {
+        ul.fw-progress-bar {
+            .fw-progress-step {
+                .fw-txt-ellipsis {
+                    color: $color__light !important;
+                    display: none;
+                }
+                li.fw-active {
+                    .fw-txt-ellipsis {
+                        color: $color__primary !important;
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+    }
+    .fw-plain-layout {
+        .fa.form-control-feedback {
+            left: 2rem !important;
+            color: darken($color__light, 20%);
+        }
+    }
+    .fw-text-input,
+    .fw-textarea {
+        font-size: 1rem !important;
+    }
+    .fw-text-input {
+        height: 3.5rem !important;
+        border-radius: 5px !important;
+    }
+    .fw-input-container {
+        input {
+            padding: 1rem 2.5rem 1rem 3.5rem !important;
+            // height: 2rem !important;
+        }
+    }
+    .fa.form-control-feedback {
+        margin-top: 1.2rem !important;
     }
 }
