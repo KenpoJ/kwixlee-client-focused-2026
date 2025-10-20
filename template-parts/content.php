@@ -35,7 +35,7 @@
 		?>
 		<div class="entry-content">
 			<!-- post thumbnail -->
-			<a href="<?php get_post_permalink(); ?>">
+			<a href="<?php echo get_post_permalink(); ?>">
 				<?php echo get_the_post_thumbnail($post_ID, 'thumbnail'); ?>
 			</a>
 			<!-- post excerpt -->
@@ -51,27 +51,15 @@
 	<div class="entry-content">
 		<?php
 		// display post categories
-		$categories = get_the_category();
-		$stripped_categories = array_map(function($category) {
-			return $category->name;
-		}, $categories);
+		$categories = get_the_category_list(' | ', '', '');
 		?>
 		<div class="categories">
 			<span>Categories: </span>
-			<?php
-			if ($categories) {
-				foreach($categories as $category) {
-					// $featuredClass = '';
-					// ($category->name != 'Featured') ? $featuredClass = 'featuredClass' : $featuredClass = '';
-					// echo '<span class="category '.$featuredClass.'">'.$category->name.'</span>'; 
-					echo '<span class="category">'.$category->name.'</span>'; 
-				}
-			}
-			?>
+			<?php echo $categories; ?>
 		</div>
 		<?php
 		// display post tags
-		$posttags = get_the_tag_list('', ' ');
+		$posttags = get_the_tag_list('', ' | ');
 		?>
 		<div class="post-tags">
 			<?php
